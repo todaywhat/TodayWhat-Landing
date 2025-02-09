@@ -28,6 +28,10 @@ export const siteConfig = {
       name: "baegteun",
       url: "https://github.com/baegteun",
     },
+    {
+      name: "khs3994",
+      url: "https://github.com/khs3994",
+    },
   ],
   creator: "baegteun",
   themeColor: [
@@ -40,7 +44,7 @@ export const siteConfig = {
     url: "https://today-what.com",
     title: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
     description:
-      "iOS, Android, macOS에서 편리하게 급식/시간표를 확인할 수 있는 서비스",
+      "iOS, Android, macOS, 크롬에서 편리하게 급식/시간표를 확인할 수 있는 서비스",
     siteName: "오늘 뭐임",
     images: [
       {
@@ -54,15 +58,16 @@ export const siteConfig = {
   twitter: {
     card: "summary_large_image",
     title: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
-    description:
-      "iOS, Android, macOS에서 편리하게 급식/시간표를 확인할 수 있는 서비스",
+    description: "iOS, Android, macOS에서 편리하게 급식/시간표를 확인하세요",
     images: ["/og-image.png"],
     creator: "@baegteun",
   },
   manifest: "/manifest.json",
   verification: {
-    google: "google-site-verification=YOUR_VERIFICATION_CODE",
-    naver: "naver-site-verification=YOUR_VERIFICATION_CODE",
+    google: "dkjjCBlzdsdLYAyHuavM5_CxJAMoMShdSB5KnXcgrKE",
+    other: {
+      "naver-site-verification": "2fa52defd3a9f2f18022d522d066c0850d672ee7",
+    },
   },
   alternates: {
     canonical: "https://today-what.com",
