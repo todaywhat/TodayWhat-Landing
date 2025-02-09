@@ -89,8 +89,8 @@ export const metadata: Metadata = {
   twitter: siteConfig.twitter,
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-16x16.png",
   },
   verification: siteConfig.verification,
   alternates: siteConfig.alternates,
