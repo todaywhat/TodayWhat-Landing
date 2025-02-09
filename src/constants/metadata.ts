@@ -1,7 +1,8 @@
 export const siteConfig = {
-  title: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
+  title:
+    "오늘 뭐임 - 학교 급식과 시간표를 한눈에 | 전국 초중고 학교생활 도우미",
   description:
-    "아이폰과 맥의 위젯, 애플워치, 맥의 Menubar, 안드로이드에서 편리하게 급식/시간표를 확인할 수 있는 서비스. 학교생활에 필요한 모든 정보를 한눈에 확인하세요.",
+    "전국 초중고등학교 급식과 시간표를 한눈에 확인하세요. 아이폰/안드로이드 위젯, 애플워치, 맥 메뉴바, 크롬 확장프로그램으로 편리하게 이용하는 스마트한 학교생활 필수 서비스. 알레르기 정보, 영양소 정보도 제공합니다.",
   keywords: [
     "학교",
     "급식",
@@ -22,6 +23,40 @@ export const siteConfig = {
     "안드로이드",
     "구글플레이",
     "플레이스토어",
+    "초등학교",
+    "중학교",
+    "고등학교",
+    "학교정보",
+    "학사일정",
+    "영양소",
+    "칼로리",
+    "학교알리미",
+    "학교생활정보",
+    "급식메뉴",
+    "오늘급식",
+    "오늘시간표",
+    "학교위젯",
+    "크롬확장프로그램",
+    "맥메뉴바",
+    "애플워치앱",
+    "학교생활도우미",
+    "스마트스쿨",
+    "학교정보알리미",
+    "급식알리미",
+    "급식앱",
+    "시간표앱",
+    "학교생활앱",
+    "학교알리미앱",
+    "급식알리미앱",
+    "학교정보앱",
+    "학교생활관리",
+    "학교생활플래너",
+    "급식정보",
+    "시간표정보",
+    "학교생활정보앱",
+    "학교앱추천",
+    "급식앱추천",
+    "시간표앱추천",
   ],
   authors: [
     {
@@ -42,10 +77,11 @@ export const siteConfig = {
     type: "website",
     locale: "ko_KR",
     url: "https://today-what.com",
-    title: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
+    title:
+      "오늘 뭐임 - 학교 급식과 시간표를 한눈에 | 전국 초중고 학교생활 도우미",
     description:
-      "iOS, Android, macOS, 크롬에서 편리하게 급식/시간표를 확인할 수 있는 서비스",
-    siteName: "오늘 뭐임",
+      "전국 초중고등학교 급식/시간표를 위젯, 애플워치, 메뉴바로 편리하게 확인하세요. 알레르기 정보와 영양소 정보를 제공하는 스마트한 학교생활 필수 서비스입니다.",
+    siteName: "오늘 뭐임 - 학교생활 도우미",
     images: [
       {
         url: "/og-image.png",
@@ -54,11 +90,17 @@ export const siteConfig = {
         alt: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
       },
     ],
+    article: {
+      authors: ["baegteun", "khs3994"],
+      tags: ["학교", "급식", "시간표", "교육", "학생"],
+    },
   },
   twitter: {
     card: "summary_large_image",
-    title: "오늘 뭐임 - 오늘 급식과 시간표를 한눈에",
-    description: "iOS, Android, macOS에서 편리하게 급식/시간표를 확인하세요",
+    title:
+      "오늘 뭐임 - 학교 급식과 시간표를 한눈에 | 전국 초중고 학교생활 도우미",
+    description:
+      "전국 초중고등학교 급식/시간표를 위젯, 애플워치, 메뉴바로 편리하게 확인하세요. 알레르기 정보와 영양소 정보를 제공하는 스마트한 학교생활 필수 서비스입니다.",
     images: ["/og-image.png"],
     creator: "@baegteun",
   },
@@ -85,5 +127,9 @@ export const siteConfig = {
   playStore: {
     url: "https://play.google.com/store/apps/details?id=com.onmi.aos",
     package: "com.onmi.aos",
+  },
+  other: {
+    "apple-itunes-app": "app-id=1629567018",
+    "google-play-app": "app-id=com.onmi.aos",
   },
 };

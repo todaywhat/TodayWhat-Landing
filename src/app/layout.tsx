@@ -12,12 +12,19 @@ const jsonLd = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "KRW",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: "오늘 뭐임",
+    },
   },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.7",
     ratingCount: "7600",
     reviewCount: "7600",
+    bestRating: "5",
+    worstRating: "1",
   },
   author: {
     "@type": "Person",
@@ -30,12 +37,12 @@ const jsonLd = {
   ],
   category: "Education",
   operatingSystem:
-    "iOS 14.0 이상, watchOS 7.0 이상, macOS 11.0 이상, Android 7.0 이상",
+    "iOS 15.0 이상, watchOS 7.0 이상, macOS 11.0 이상, Android 7.0 이상, Chrome",
   screenshot: {
     "@type": "ImageObject",
     url: "https://today-what.com/og-image.png",
   },
-  applicationCategory: "EducationalApplication",
+  applicationCategory: ["EducationalApplication", "LifestyleApplication"],
   availableOnDevice: [
     "iPhone",
     "iPad",
@@ -43,6 +50,23 @@ const jsonLd = {
     "Mac",
     "Android Phone",
     "Android Tablet",
+  ],
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      author: {
+        "@type": "Person",
+        name: "App Store 리뷰어",
+      },
+      reviewBody:
+        "깔끔한 디자인, 유용한 기능(급식 조회, 시간표 조회), 복잡하지 않은 시작 과정까지 3개를 다 충족했습니다.",
+    },
   ],
 };
 
@@ -93,24 +117,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="scroll-smooth">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
         <link
           rel="preload"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
           as="style"
+          crossOrigin="anonymous"
         />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+          crossOrigin="anonymous"
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-backgroundMain text-textPrimary">
-        <main>{children}</main>
+      <body className="bg-backgroundMain text-textPrimary min-h-screen">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black"
+        >
+          메인 콘텐츠로 바로가기
+        </a>
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

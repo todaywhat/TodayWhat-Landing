@@ -3,9 +3,25 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
+Disallow: /private/
+Disallow: /admin/
+
+# 구글봇 특별 규칙
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# 이미지 검색엔진 규칙
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.webp$
 
 # 사이트맵 위치
 Sitemap: https://today-what.com/sitemap.xml
 
 # 크롤링 속도 제어
-Crawl-delay: 10 
+Crawl-delay: 1 
