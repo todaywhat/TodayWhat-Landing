@@ -1,0 +1,11 @@
+# 모든 검색 엔진 크롤러에 대한 규칙
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# 사이트맵 위치
+Sitemap: https://today-what.com/sitemap.xml
+
+# 크롤링 속도 제어
+Crawl-delay: 10 
